@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>car</title>
+    <style>
+         :root {
+            --primary-color: #F7CE4C;
+        }
+        
+        body {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            background-color: antiquewhite;
+            height: 100vh;
+        }
+        
+        .car {
+            flex-direction: row;
+            display: flex;
+            align-items: baseline;
+            position: absolute;
+            animation: speed 7s linear infinite;
+        }
+        
+        .back {
+            border-radius: 100% 0px 0px 0px;
+            height: 180px;
+            width: 180px;
+            background: linear-gradient(to top right, #E9B033, #dec226, #f9b92e, #b58929);
+        }
+        
+        .center {
+            background: linear-gradient(to top left, #E9B033, #dec226, #f9b92e, #b58929);
+            height: 180px;
+            width: 100px;
+            border-radius: 0px 70px 0px 0px;
+        }
+        
+        .center img {
+            width: 60px;
+            height: auto;
+            display: block;
+            margin: 50px auto 0;
+            opacity: 0.1;
+            position: absolute;
+            bottom: 10px;
+        }
+        
+        .front {
+            background: linear-gradient(to right, #E9B033, #dec226, #e9ab25, #f9b92e);
+            height: 90px;
+            width: 130px;
+            border-radius: 0px 80px 0px 0px;
+        }
+        
+        .wheel {
+            background-color: rgb(40, 37, 37);
+            border-radius: 50%;
+            height: 90px;
+            width: 90px;
+            position: absolute;
+            left: 30px;
+            bottom: -30px;
+            animation: whe 0s linear alternate;
+        }
+        
+        .wheel1 {
+            background-color: rgb(40, 37, 37);
+            border-radius: 50%;
+            height: 90px;
+            width: 90px;
+            position: absolute;
+            right: 30px;
+            bottom: -30px;
+            animation: whe 1s linear alternate;
+        }
+        
+        .windo {
+            background-color: aliceblue;
+            border-radius: 0px 100px 0px 0px;
+            border: 1px solid black;
+            width: 90px;
+            height: 50px;
+            position: absolute;
+            top: 25px;
+            left: 170px;
+        }
+        
+        .windo1 {
+            background-color: aliceblue;
+            border-radius: 100% 0px 0px 0px;
+            border: 1px solid black;
+            width: 90px;
+            height: 50px;
+            position: absolute;
+            top: 25px;
+            left: 65px;
+        }
+        
+        .stand {
+            background-color: rgb(40, 37, 37);
+            width: 140px;
+            height: 5px;
+            position: absolute;
+            left: 130px;
+            bottom: 0px;
+        }
+        
+        @keyframes whe {
+            0% {
+                transform: rotatex(10deg);
+            }
+            25% {
+                transform: rotateX(30deg);
+            }
+            50% {
+                transform: rotateX(10deg);
+            }
+            75% {
+                transform: rotateX(30deg);
+            }
+            100% {
+                transform: rotate(15deg);
+            }
+        }
+        
+        @keyframes speed {
+            0% {
+                transform: translateX(0px);
+            }
+            100% {
+                transform: translateX(100vw);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="car">
+        <div class="back">
+            <div class="wheel"></div>
+            <div class="windo1"></div>
+        </div>
+        <div class="center">
+            <img src="https://i.pinimg.com/1200x/a8/60/09/a860099ac4dd177c77b82a84569ff9c0.jpg" alt="driver">
+
+            <div class="stand"></div>
+            <div class="windo"></div>
+        </div>
+        <div class="front">
+            <div class="wheel1"></div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>
